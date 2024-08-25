@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "ES2022", // The version of JavaScript to emit.
+        "module": "commonjs", // Specifies the module code generation method.
+        "lib": [
+            "ES2022",
+            "DOM"
+        ], // Include libraries for the runtime environment.
+        "outDir": "./dist", // Directory to output compiled files.
+        "rootDir": "./src", // Directory containing the TypeScript source files.
+        "strict": true, // Enable all strict type-checking options.
+        "esModuleInterop": true, // Enables compatibility with CommonJS modules.
+        "skipLibCheck": true, // Skip type checking of declaration files.
+        "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names.
+        "resolveJsonModule": true, // Include modules imported from JSON files.
+        "moduleResolution": "node", // Type of module resolution to use.
+        "baseUrl": ".", // Base directory to resolve non-relative module names.
+        "paths": { // Aliases to simplify module imports.
+            "@models/*": [
+                "src/models/*"
+            ],
+            "@routes/*": [
+                "src/routes/*"
+            ],
+            "@middleware/*": [
+                "src/middleware/*"
+            ]
+        },
+        "noImplicitAny": false, // Allow variables to implicitly have an 'any' type.
+        "sourceMap": true, // Generate source maps for debugging.
+        "inlineSources": true // Include source content in the source map files.
+    },
+    "include": [
+        "src/**/*.ts"
+    ], // Files to include in the compilation process.
+    "exclude": [
+        "node_modules",
+        "dist"
+    ] // Exclude directories from the compilation process.
+}
